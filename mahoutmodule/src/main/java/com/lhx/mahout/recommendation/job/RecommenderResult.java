@@ -15,7 +15,7 @@ public class RecommenderResult {
     final static int RECOMMENDER_NUM = 3;
 
     public static void main(String[] args) throws TasteException, IOException {
-        String file = "datafile/job/pv.csv";
+        String file = "C:\\Users\\Lifeix\\Documents\\IdeaProjects\\recommendProject\\mahoutmodule\\datafile\\job\\pv.csv";
         DataModel dataModel = RecommendFactory.buildDataModelNoPref(file);
         RecommenderBuilder rb1 = RecommenderEvaluator.userCityBlock(dataModel);
         RecommenderBuilder rb2 = RecommenderEvaluator.itemLoglikelihood(dataModel);

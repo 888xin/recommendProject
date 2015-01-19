@@ -31,9 +31,9 @@ public class RecommenderTest {
 
     public static void main(String[] args) throws TasteException, IOException {
         RandomUtils.useTestSeed();
-        String file = "datafile/item.csv";
+        String file = "C:\\Users\\Lifeix\\Documents\\IdeaProjects\\recommendProject\\mahoutmodule\\datafile\\item.csv";
         DataModel dataModel = RecommendFactory.buildDataModel(file);
-        treeCluster(dataModel);
+        itemCF(dataModel);
     }
 
     public static void userCF(DataModel dataModel) throws TasteException {

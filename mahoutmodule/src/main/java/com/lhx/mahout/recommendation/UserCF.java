@@ -21,7 +21,7 @@ public class UserCF {
     final static int RECOMMENDER_NUM = 3;
 
     public static void main(String[] args) throws IOException, TasteException {
-        String file = "datafile/item.csv";
+        String file = "C:\\Users\\Lifeix\\Documents\\IdeaProjects\\recommendProject\\mahoutmodule\\datafile\\item.csv";
         DataModel model = new FileDataModel(new File(file));
         UserSimilarity user = new EuclideanDistanceSimilarity(model);
         NearestNUserNeighborhood neighbor = new NearestNUserNeighborhood(NEIGHBORHOOD_NUM, user, model);

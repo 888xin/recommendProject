@@ -1,8 +1,8 @@
 package com.lhx.mahout.recommendation;
 
+import com.lhx.mahout.hdfs.HDFSDao;
 import org.apache.hadoop.mapred.JobConf;
 import org.apache.mahout.cf.taste.hadoop.item.RecommenderJob;
-import org.conan.mymahout.hdfs.HdfsDAO;
 
 public class ItemCFHadoop {
 
@@ -17,7 +17,7 @@ public class ItemCFHadoop {
         String tmpPath = HDFS + "/tmp/" + System.currentTimeMillis();
 
         JobConf conf = config();
-        HdfsDAO hdfs = new HdfsDAO(HDFS, conf);
+        HDFSDao hdfs = new HDFSDao(HDFS, conf);
         hdfs.rmr(inPath);
         hdfs.mkdirs(inPath);
         hdfs.copyFile(localFile, inPath);
